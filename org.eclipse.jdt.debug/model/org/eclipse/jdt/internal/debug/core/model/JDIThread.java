@@ -3034,6 +3034,9 @@ public class JDIThread extends JDIDebugElement implements IJavaThread {
 							return true;
 						}
 					}
+					if (method.declaringType().name().contains("$$Lambda$")) { //$NON-NLS-1$
+						return true;
+					}
 				}
 			}
 			return false;
